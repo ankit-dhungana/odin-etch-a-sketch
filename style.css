@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: #6e6ecf;
+  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+}
+
+body h1 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: #fff;
+}
+.container {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+.grid-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  margin: 2.5rem auto;
+  height: 720px;
+  width: 720px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  background-color: #fff;
+  border: 0.1px solid black;
+}
