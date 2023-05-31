@@ -38,3 +38,46 @@ body h1 {
   background-color: #fff;
   border: 0.1px solid black;
 }
+
+.cell:hover {
+  background: #000;
+  transform: scale(1.1);
+}
+
+.controls-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.control-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.color-picker {
+  appearance: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+}
+.color-picker::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 2px solid #ffffff9e;
+}
+
+.controls-section button:hover {
+  background: #000;
+  color: #fff;
+  transform: scale(1.2);
+}
