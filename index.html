@@ -9,21 +9,30 @@
     <script src="script.js" defer></script>
     <title>Etch-A-Sketch</title>
 </head>
-<h1>Etch-A-Sketch</h1>
-<div class="container">
-    <div class="grid-container">
-        <!-- holds the added grid using JS -->
-    </div>
-    <div class="controls-section">
-        <button id="clear" class="control-button">Clear</button>
-        <button id="resize" class="control-button">Resize</button>
-        <button id="rainbow" class="control-button">Rainbow</button>
-        <input type="color" id="paint-color" class="color-picker">
-    </div>
-</div>
 
 <body>
+    <div class="header">
+        <h1>Etch-A-Sketch</h1>
+        <span class="help-info" data-tooltip="Left click and hold to stop painting.
+             Click outside after picking color to activate the selected color.">
+            ❓</span>
 
+
+    </div>
+    <div class="container">
+        <div class="grid-container">
+            <!-- holds the added grid using JS -->
+        </div>
+        <div class="controls-section">
+            <button id="clear" class="control-button">Clear</button>
+            <button id="resize" class="control-button">Resize</button>
+            <button id="rainbow" class="control-button">Rainbow</button>
+            <input type="color" id="paint-color" class="color-picker">
+        </div>
+    </div>
 </body>
+<footer>
+    <p>Copyright @ 2023 ankit-dhungana</p>
+</footer>
 
 </html>

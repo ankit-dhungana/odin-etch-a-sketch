@@ -18,6 +18,40 @@ body h1 {
   text-align: center;
   color: #fff;
 }
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.2rem;
+  padding-top: 1.5rem;
+  margin-left: 20rem;
+}
+.help-info {
+  position: relative;
+  width: 17rem;
+}
+.help-info::after,
+.help-info::before {
+  --scale: 0;
+  position: absolute;
+  left: 50%;
+  top: -1.5rem;
+  transform: translateX(-35%) scale(var(--scale));
+}
+.help-info::before {
+  content: attr(data-tooltip);
+  color: #fff;
+  background: #00000059;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: max-content;
+  max-width: 100%;
+}
+.help-info:hover::before {
+  --scale: 1;
+  transition: all 0.4s ease;
+}
 .container {
   display: grid;
   place-content: center;
@@ -80,4 +114,29 @@ body h1 {
   background: #000;
   color: #fff;
   transform: scale(1.2);
+}
+.rainbow-btn {
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8f00ff
+  );
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+footer p {
+  text-align: center;
+  color: #fff;
+  padding: 10px;
 }

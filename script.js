@@ -64,6 +64,18 @@ class PixelPainter {
       cell.style.backgroundColor = "white";
     });
   }
+
+  drawUsingRainbow() {
+    //getting a random color and chaning it after every click
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+      cell.addEventListener("mouseover", (e) => {
+        if (e.buttons === 1) return;
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        cell.style.backgroundColor = "#" + randomColor;
+      });
+    });
+  }
   setupEventListeners() {
     this.resizeButton.addEventListener("click", () => {
       this.resizeGrid();
@@ -73,6 +85,21 @@ class PixelPainter {
 
     this.clearButton.addEventListener("click", () => {
       this.clearGrid();
+    });
+
+    this.colorPicker.addEventListener("change", (e) => {
+      this.currentColor = e.target.value;
+      this.drawPixel(this.currentColor);
+    });
+
+    this.rainbowButton.addEventListener("click", () => {
+      this.rainbowButton.classList.toggle("control-button");
+      this.rainbowButton.classList.toggle("rainbow-btn");
+      if (this.rainbowButton.classList.contains("rainbow-btn")) {
+        this.drawUsingRainbow();
+      } else {
+        this.drawPixel(this.currentColor);
+      }
     });
   }
 }
