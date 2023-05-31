@@ -58,11 +58,21 @@ class PixelPainter {
       });
     });
   }
+  clearGrid() {
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+      cell.style.backgroundColor = "white";
+    });
+  }
   setupEventListeners() {
     this.resizeButton.addEventListener("click", () => {
       this.resizeGrid();
       this.rainbowButton.classList.remove("rainbow-btn");
       this.rainbowButton.classList.add("control-button");
+    });
+
+    this.clearButton.addEventListener("click", () => {
+      this.clearGrid();
     });
   }
 }
